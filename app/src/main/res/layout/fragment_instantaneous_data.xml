@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="match_parent"
-                      android:orientation="vertical"
-            >
+                      android:orientation="vertical">
 
             <TextView
                 style="?android:listSeparatorTextViewStyle"
@@ -167,8 +166,8 @@
                 android:layout_marginRight="16dp"/>
         </LinearLayout>
     </ScrollView>
-=======
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--=======-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
@@ -291,4 +290,4 @@
         android:textColor="@android:color/background_light"
         android:background="@color/lighterBackgroundTheme" />
 </LinearLayout>
->>>>>>> 4d8387fd21859511a75141235a15aaed4af59665
+<!--&gt;>>>>>> 4d8387fd21859511a75141235a15aaed4af59665-->
