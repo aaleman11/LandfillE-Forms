@@ -1,8 +1,11 @@
 package com.landfilleforms.android.landfille_forms;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.DialogPreference;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
@@ -18,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.landfilleforms.android.landfille_forms.model.InstantaneousData;
 
@@ -221,7 +225,49 @@ public class InstantaneousDataFragment extends Fragment {
         mSubmitButton.setText(R.string.submit_button_label);
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                getActivity().finish();
+                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
+                System.out.println(mInstantaneousData.getMethaneReading());
+                if (mInstantaneousData.getMethaneReading() >= 500) {
+                    alertBuilder.setMessage("CH4 levels are over 500! There is an IME! Navigate to IME form?")
+                            .setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(getActivity(), R.string.coming_soon_toast, Toast.LENGTH_SHORT).show();
+                            getActivity().finish();
+                        }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog alert = alertBuilder.create();
+                    alert.setTitle("New IME");
+                    alert.show();
+                }
+                else if (mInstantaneousData.getMethaneReading() >= 200 && mInstantaneousData.getMethaneReading() <=499) {
+                    alertBuilder.setMessage("CH4 levels are between 200-499! There is a Warmspot. Navigate to Warmspot form?")
+                            .setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(getActivity(), R.string.coming_soon_toast, Toast.LENGTH_SHORT).show();
+                            getActivity().finish();
+                        }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog alert = alertBuilder.create();
+                    alert.setTitle("New Warnspot");
+                    alert.show();
+
+                }
+                else{
+                    getActivity().finish();
+                }
+
             }
         });
 

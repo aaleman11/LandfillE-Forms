@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/backgroundTheme">
+    android:background="@color/lighterBackgroundTheme">
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -11,7 +11,7 @@
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/inspector_title"
@@ -20,21 +20,21 @@
 
         <TextView
             android:id="@+id/warmspot_inspector_name"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:text="@string/location_label"
             android:textColor="@color/textLabelColor"
             />
 
         <TextView
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:id="@+id/warmspot_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/grid_id_label"
@@ -51,14 +51,14 @@
 
         <TextView
             android:id="@+id/warmspot_grid_id"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/methane_reading_label"
@@ -67,14 +67,14 @@
 
         <TextView
             android:id="@+id/warmspot_methane_reading"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/time_picker_title"
@@ -91,7 +91,7 @@
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/size_input_label"
@@ -107,7 +107,7 @@
 
         <TextView
             style="?android:listSeparatorTextViewStyle"
-            android:background="@color/backgroundTheme"
+            android:background="@color/lighterBackgroundTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description"

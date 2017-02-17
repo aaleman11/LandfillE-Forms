@@ -50,7 +50,6 @@ public class InstantaneousFormFragment extends Fragment {
     private InstantaneousDataAdapter mAdapter;
     private Button mExportButton;
 
-    private double currentMethane;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

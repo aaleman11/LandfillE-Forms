@@ -97,8 +97,8 @@ public class LoginFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
 
-            }
-        });
+    }
+});
 
         mLoginButton = (Button)v.findViewById(R.id.login_submit);//Change!
         mLoginButton.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +112,7 @@ public class LoginFragment extends Fragment {
                             session.createLoginSession(mExistingUsers.get(i).getUsername(), mExistingUsers.get(i).getFullName());
                             Intent intent = new Intent(getActivity(),MenuActivity.class);
                             startActivity(intent);
+
                         }
 
 

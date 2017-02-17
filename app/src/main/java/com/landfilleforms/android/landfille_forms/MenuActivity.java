@@ -28,14 +28,13 @@ public class MenuActivity extends AppCompatActivity
     private FragmentActivity myContext;
     SessionManager session;
     User mUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Home");
-
 
         //session used
         session = new SessionManager(getApplicationContext());
@@ -45,7 +44,6 @@ public class MenuActivity extends AppCompatActivity
         mUser = new User();
         mUser.setUsername(currentUser.get(SessionManager.KEY_USERNAME));
         mUser.setFullName(currentUser.get(SessionManager.KEY_USERFULLNAME));
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -110,14 +108,10 @@ public class MenuActivity extends AppCompatActivity
             startActivity(i);
 
         }else if (id == R.id.nav_export) {
-            //android.app.FragmentManager fm = getFragmentManager();
             fm.beginTransaction().replace(R.id.context_frame,new ExportFragment()).commit();
 
         } else if (id == R.id.nav_sync) {
-
-        }
-        else if (id == R.id.nav_settings) {
-
+            //not yet implemented
         }
         else if (id == R.id.nav_logout) {
             session.logoutUser();
